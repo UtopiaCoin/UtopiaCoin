@@ -17,10 +17,10 @@ How to Compile
 -------------------
 Run these commands from project root directory
 
-autoreconf --install
-aclocal
-automake --add-missing
-./configure --with-incompatible-bdb
+autoreconf --install;
+aclocal;
+automake --add-missing;
+./configure --with-incompatible-bdb;
 make
 
 
