@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_CHAIN_H
-#define NEWCOIN_CHAIN_H
+#ifndef UTOPIACOIN_CHAIN_H
+#define UTOPIACOIN_CHAIN_H
 
 #include "primitives/block.h"
 #include "pow.h"
@@ -404,4 +404,4 @@ public:
     const CBlockIndex *FindFork(const CBlockIndex *pindex) const;
 };
 
-#endif // NEWCOIN_CHAIN_H
+#endif // UTOPIACOIN_CHAIN_H
