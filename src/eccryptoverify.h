@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_ECCRYPTOVERIFY_H
-#define NEWCOIN_ECCRYPTOVERIFY_H
+#ifndef UTOPIACOIN_ECCRYPTOVERIFY_H
+#define UTOPIACOIN_ECCRYPTOVERIFY_H
 
 #include <vector>
 #include <cstdlib>
@@ -18,4 +18,4 @@ bool CheckSignatureElement(const unsigned char *vch, int len, bool half);
 
 } // eccrypto namespace
 
-#endif // NEWCOIN_ECCRYPTOVERIFY_H
+#endif // UTOPIACOIN_ECCRYPTOVERIFY_H
