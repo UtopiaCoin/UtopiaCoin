@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_CHAINPARAMSBASE_H
-#define NEWCOIN_CHAINPARAMSBASE_H
+#ifndef UTOPIACOIN_CHAINPARAMSBASE_H
+#define UTOPIACOIN_CHAINPARAMSBASE_H
 
 #include <string>
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between newcoin-cli and newcoind)
- * of a given instance of the Newcoin system.
+ * CBaseChainParams defines the base parameters (shared between utopiacoin-cli and utopiacoind)
+ * of a given instance of the Utopiacoin system.
  */
 class CBaseChainParams
 {
@@ -62,4 +62,4 @@ bool SelectBaseParamsFromCommandLine();
  */
 bool AreBaseParamsConfigured();
 
-#endif // NEWCOIN_CHAINPARAMSBASE_H
+#endif // UTOPIACOIN_CHAINPARAMSBASE_H
