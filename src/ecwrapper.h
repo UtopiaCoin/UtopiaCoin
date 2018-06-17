@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_ECWRAPPER_H
-#define NEWCOIN_ECWRAPPER_H
+#ifndef UTOPIACOIN_ECWRAPPER_H
+#define UTOPIACOIN_ECWRAPPER_H
 
 #include <cstddef>
 #include <vector>
@@ -37,4 +37,4 @@ public:
     static bool SanityCheck();
 };
 
-#endif // NEWCOIN_ECWRAPPER_H
+#endif // UTOPIACOIN_ECWRAPPER_H
