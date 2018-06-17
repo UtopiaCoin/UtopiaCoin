@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_CHECKQUEUE_H
-#define NEWCOIN_CHECKQUEUE_H
+#ifndef UTOPIACOIN_CHECKQUEUE_H
+#define UTOPIACOIN_CHECKQUEUE_H
 
 #include <algorithm>
 #include <vector>
@@ -212,4 +212,4 @@ public:
     }
 };
 
-#endif // NEWCOIN_CHECKQUEUE_H
+#endif // UTOPIACOIN_CHECKQUEUE_H
