@@ -3,11 +3,11 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_COMPAT_H
-#define NEWCOIN_COMPAT_H
+#ifndef UTOPIACOIN_COMPAT_H
+#define UTOPIACOIN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/newcoin-config.h"
+#include "config/utopiacoin-config.h"
 #endif
 
 #ifdef WIN32
@@ -90,4 +90,4 @@ typedef u_int SOCKET;
 
 size_t strnlen_int( const char *start, size_t max_len);
 
-#endif // NEWCOIN_COMPAT_H
+#endif // UTOPIACOIN_COMPAT_H
