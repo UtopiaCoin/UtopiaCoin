@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_AMOUNT_H
-#define NEWCOIN_AMOUNT_H
+#ifndef UTOPIACOIN_AMOUNT_H
+#define UTOPIACOIN_AMOUNT_H
 
 #include "serialize.h"
 
@@ -51,4 +51,4 @@ public:
     }
 };
 
-#endif //  NEWCOIN_AMOUNT_H
+#endif //  UTOPIACOIN_AMOUNT_H
