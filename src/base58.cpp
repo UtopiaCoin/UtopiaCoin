@@ -203,13 +203,13 @@ int CBase58Data::CompareTo(const CBase58Data& b58) const
 
 namespace
 {
-class CNewcoinAddressVisitor : public boost::static_visitor<bool>
+class CUtopiacoinAddressVisitor : public boost::static_visitor<bool>
 {
 private:
-    CNewcoinAddress* addr;
+    CUtopiacoinAddress* addr;
 
 public:
-    CNewcoinAddressVisitor(CNewcoinAddress* addrIn) : addr(addrIn) {}
+    CUtopiacoinAddressVisitor(CUtopiacoinAddress* addrIn) : addr(addrIn) {}
 
     bool operator()(const CKeyID& id) const { return addr->Set(id); }
     bool operator()(const CScriptID& id) const { return addr->Set(id); }
@@ -218,29 +218,29 @@ public:
 
 } // anon namespace
 
-bool CNewcoinAddress::Set(const CKeyID& id)
+bool CUtopiacoinAddress::Set(const CKeyID& id)
 {
     SetData(Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS), &id, 20);
     return true;
 }
 
-bool CNewcoinAddress::Set(const CScriptID& id)
+bool CUtopiacoinAddress::Set(const CScriptID& id)
 {
     SetData(Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS), &id, 20);
     return true;
 }
 
-bool CNewcoinAddress::Set(const CTxDestination& dest)
+bool CUtopiacoinAddress::Set(const CTxDestination& dest)
 {
-    return boost::apply_visitor(CNewcoinAddressVisitor(this), dest);
+    return boost::apply_visitor(CUtopiacoinAddressVisitor(this), dest);
 }
 
-bool CNewcoinAddress::IsValid() const
+bool CUtopiacoinAddress::IsValid() const
 {
     return IsValid(Params());
 }
 
-bool CNewcoinAddress::IsValid(const CChainParams& params) const
+bool CUtopiacoinAddress::IsValid(const CChainParams& params) const
 {
     bool fCorrectSize = vchData.size() == 20;
     bool fKnownVersion = vchVersion == params.Base58Prefix(CChainParams::PUBKEY_ADDRESS) ||
@@ -248,7 +248,7 @@ bool CNewcoinAddress::IsValid(const CChainParams& params) const
     return fCorrectSize && fKnownVersion;
 }
 
-CTxDestination CNewcoinAddress::Get() const
+CTxDestination CUtopiacoinAddress::Get() const
 {
     if (!IsValid())
         return CNoDestination();
@@ -262,7 +262,7 @@ CTxDestination CNewcoinAddress::Get() const
         return CNoDestination();
 }
 
-bool CNewcoinAddress::GetKeyID(CKeyID& keyID) const
+bool CUtopiacoinAddress::GetKeyID(CKeyID& keyID) const
 {
     if (!IsValid() || vchVersion != Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS))
         return false;
@@ -272,12 +272,12 @@ bool CNewcoinAddress::GetKeyID(CKeyID& keyID) const
     return true;
 }
 
-bool CNewcoinAddress::IsScript() const
+bool CUtopiacoinAddress::IsScript() const
 {
     return IsValid() && vchVersion == Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS);
 }
 
-void CNewcoinSecret::SetKey(const CKey& vchSecret)
+void CUtopiacoinSecret::SetKey(const CKey& vchSecret)
 {
     assert(vchSecret.IsValid());
     SetData(Params().Base58Prefix(CChainParams::SECRET_KEY), vchSecret.begin(), vchSecret.size());
@@ -285,7 +285,7 @@ void CNewcoinSecret::SetKey(const CKey& vchSecret)
         vchData.push_back(1);
 }
 
-CKey CNewcoinSecret::GetKey()
+CKey CUtopiacoinSecret::GetKey()
 {
     CKey ret;
     assert(vchData.size() >= 32);
@@ -293,19 +293,19 @@ CKey CNewcoinSecret::GetKey()
     return ret;
 }
 
-bool CNewcoinSecret::IsValid() const
+bool CUtopiacoinSecret::IsValid() const
 {
     bool fExpectedFormat = vchData.size() == 32 || (vchData.size() == 33 && vchData[32] == 1);
     bool fCorrectVersion = vchVersion == Params().Base58Prefix(CChainParams::SECRET_KEY);
     return fExpectedFormat && fCorrectVersion;
 }
 
-bool CNewcoinSecret::SetString(const char* pszSecret)
+bool CUtopiacoinSecret::SetString(const char* pszSecret)
 {
     return CBase58Data::SetString(pszSecret) && IsValid();
 }
 
-bool CNewcoinSecret::SetString(const std::string& strSecret)
+bool CUtopiacoinSecret::SetString(const std::string& strSecret)
 {
     return SetString(strSecret.c_str());
 }
