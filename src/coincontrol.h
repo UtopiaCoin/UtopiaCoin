@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_COINCONTROL_H
-#define NEWCOIN_COINCONTROL_H
+#ifndef UTOPIACOIN_COINCONTROL_H
+#define UTOPIACOIN_COINCONTROL_H
 
 #include "primitives/transaction.h"
 
@@ -59,4 +59,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // NEWCOIN_COINCONTROL_H
+#endif // UTOPIACOIN_COINCONTROL_H
