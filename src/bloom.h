@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_BLOOM_H
-#define NEWCOIN_BLOOM_H
+#ifndef UTOPIACOIN_BLOOM_H
+#define UTOPIACOIN_BLOOM_H
 
 #include "serialize.h"
 
@@ -97,4 +97,4 @@ public:
     void UpdateEmptyFull();
 };
 
-#endif // NEWCOIN_BLOOM_H
+#endif // UTOPIACOIN_BLOOM_H
