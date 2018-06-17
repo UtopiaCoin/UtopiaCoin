@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_CHECKPOINTS_H
-#define NEWCOIN_CHECKPOINTS_H
+#ifndef UTOPIACOIN_CHECKPOINTS_H
+#define UTOPIACOIN_CHECKPOINTS_H
 
 #include "uint256.h"
 
@@ -41,4 +41,4 @@ extern bool fEnabled;
 
 } //namespace Checkpoints
 
-#endif // NEWCOIN_CHECKPOINTS_H
+#endif // UTOPIACOIN_CHECKPOINTS_H
