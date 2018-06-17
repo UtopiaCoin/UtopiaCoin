@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_COMPRESSOR_H
-#define NEWCOIN_COMPRESSOR_H
+#ifndef UTOPIACOIN_COMPRESSOR_H
+#define UTOPIACOIN_COMPRESSOR_H
 
 #include "primitives/transaction.h"
 #include "script/script.h"
@@ -120,4 +120,4 @@ public:
     }
 };
 
-#endif // NEWCOIN_COMPRESSOR_H
+#endif // UTOPIACOIN_COMPRESSOR_H
