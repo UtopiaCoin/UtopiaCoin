@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_ALERT_H
-#define NEWCOIN_ALERT_H
+#ifndef UTOPIACOIN_ALERT_H
+#define UTOPIACOIN_ALERT_H
 
 #include "serialize.h"
 #include "sync.h"
@@ -110,4 +110,4 @@ public:
     static CAlert getAlertByHash(const uint256 &hash);
 };
 
-#endif // NEWCOIN_ALERT_H
+#endif // UTOPIACOIN_ALERT_H
