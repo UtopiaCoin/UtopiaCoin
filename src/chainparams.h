@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NEWCOIN_CHAINPARAMS_H
-#define NEWCOIN_CHAINPARAMS_H
+#ifndef UTOPIACOIN_CHAINPARAMS_H
+#define UTOPIACOIN_CHAINPARAMS_H
 
 #include "chainparamsbase.h"
 #include "checkpoints.h"
@@ -23,7 +23,7 @@ struct CDNSSeedData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * Newcoin system. There are three: the main network on which people trade goods
+ * Utopiacoin system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -52,7 +52,7 @@ public:
     int RejectBlockOutdatedMajority() const { return nRejectBlockOutdatedMajority; }
     int ToCheckBlockUpgradeMajority() const { return nToCheckBlockUpgradeMajority; }
 
-    /** Used if GenerateNewcoins is called with a negative number of threads */
+    /** Used if GenerateUtopiacoins is called with a negative number of threads */
     int DefaultMinerThreads() const { return nMinerThreads; }
     const CBlock& GenesisBlock() const { return genesis; }
     bool RequireRPCPassword() const { return fRequireRPCPassword; }
@@ -151,4 +151,4 @@ void SelectParams(CBaseChainParams::Network network);
  */
 bool SelectParamsFromCommandLine();
 
-#endif // NEWCOIN_CHAINPARAMS_H
+#endif // UTOPIACOIN_CHAINPARAMS_H
